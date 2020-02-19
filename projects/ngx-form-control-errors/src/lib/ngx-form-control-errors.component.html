@@ -1,31 +1,31 @@
 <ng-container *ngIf="control?.touched && control?.dirty && control?.invalid">
   <ng-container *ngIf="control.hasError('required')"
-    ><span class="text-danger">Required*</span></ng-container
+    ><span style="color: red">Required*</span></ng-container
   >
   <ng-container *ngIf="control?.hasError('email')"
-    ><span class="text-danger">Please enter a valid email</span></ng-container
+    ><span style="color: red">Please enter a valid email</span></ng-container
   >
   <ng-container *ngIf="control?.hasError('invalid')"
-    ><span class="text-danger"
+    ><span style="color: red"
       >The value you entered is invalid</span
     ></ng-container
   >
   <ng-container *ngIf="control?.hasError('pattern')"
-    ><span class="text-danger"
+    ><span style="color: red"
       >Must contain minimum eight characters, at least one uppercase letter, one
       lowercase letter and one number:</span
     ></ng-container
   >
   <ng-container *ngIf="control?.hasError('hasApiValidationErrors')">
     <div
-      class="text-danger"
+      style="color: red"
       *ngFor="let error of control.errors['hasApiValidationErrors']"
     >
       {{ error }}
     </div>
   </ng-container>
   <ng-container *ngIf="control?.hasError('minlength')"
-    ><span class="text-danger"
+    ><span style="color: red"
       >You must enter at least
       {{ (control?.errors)["minlength"].requiredLength }}
       characters</span
@@ -33,6 +33,6 @@
   /></ng-container>
 
   <ng-container *ngIf="control?.hasError('passwordMismatch')"
-    ><span class="text-danger">You passwords do not match</span></ng-container
+    ><span style="color: red">You passwords do not match</span></ng-container
   >
 </ng-container>
