@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "ngxFormErrors",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "ngx-form-errors",
+      "kebab-case"
+    ]
+  }
+}
