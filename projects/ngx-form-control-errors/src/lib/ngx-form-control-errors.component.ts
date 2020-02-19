@@ -7,10 +7,10 @@ import { FormControl } from "@angular/forms";
   styles: []
 })
 export class NgxFormControlErrorsComponent implements OnInit {
-  @Input() formControlField: FormControl;
+  @Input() control: FormControl;
   constructor() {}
 
   ngOnInit() {
-    console.log(this.formControlField);
+    console.log(this.control);
   }
 }

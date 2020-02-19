@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-form-control-errors": [
+        "dist/ngx-form-control-errors"
+      ],
+      "ngx-form-control-errors/*": [
+        "dist/ngx-form-control-errors/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
