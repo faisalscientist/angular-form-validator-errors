@@ -1,44 +1,38 @@
-<ng-container
-  *ngIf="
-    formControlField?.touched &&
-    formControlField?.dirty &&
-    formControlField?.invalid
-  "
->
-  <ng-container *ngIf="formControlField.hasError('required')"
+<ng-container *ngIf="control?.touched && control?.dirty && control?.invalid">
+  <ng-container *ngIf="control.hasError('required')"
     ><span class="text-danger">Required*</span></ng-container
   >
-  <ng-container *ngIf="formControlField?.hasError('email')"
+  <ng-container *ngIf="control?.hasError('email')"
     ><span class="text-danger">Please enter a valid email</span></ng-container
   >
-  <ng-container *ngIf="formControlField?.hasError('invalid')"
+  <ng-container *ngIf="control?.hasError('invalid')"
     ><span class="text-danger"
       >The value you entered is invalid</span
     ></ng-container
   >
-  <ng-container *ngIf="formControlField?.hasError('pattern')"
+  <ng-container *ngIf="control?.hasError('pattern')"
     ><span class="text-danger"
       >Must contain minimum eight characters, at least one uppercase letter, one
       lowercase letter and one number:</span
     ></ng-container
   >
-  <ng-container *ngIf="formControlField?.hasError('hasApiValidationErrors')">
+  <ng-container *ngIf="control?.hasError('hasApiValidationErrors')">
     <div
       class="text-danger"
-      *ngFor="let error of formControlField.errors['hasApiValidationErrors']"
+      *ngFor="let error of control.errors['hasApiValidationErrors']"
     >
       {{ error }}
     </div>
   </ng-container>
-  <ng-container *ngIf="formControlField?.hasError('minlength')"
+  <ng-container *ngIf="control?.hasError('minlength')"
     ><span class="text-danger"
       >You must enter at least
-      {{ (formControlField?.errors)["minlength"].requiredLength }}
+      {{ (control?.errors)["minlength"].requiredLength }}
       characters</span
     ><br
   /></ng-container>
 
-  <ng-container *ngIf="formControlField?.hasError('passwordMismatch')"
+  <ng-container *ngIf="control?.hasError('passwordMismatch')"
     ><span class="text-danger">You passwords do not match</span></ng-container
   >
 </ng-container>
