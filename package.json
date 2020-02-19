@@ -1,6 +1,6 @@
 {
   "name": "ngx-form-control-errors-library",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "This is a simple library that allows you to display reactive form validator errors like required, maxlength, etc on the form.",
   "keywords": [
     "Angular",
